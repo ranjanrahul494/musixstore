@@ -3,330 +3,50 @@
         <h1>
             Latest Hindi
         </h1>
-        <div>
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+        <a routerLink="/gallery"  routerLinkActive="active">All music</a>
+        <div class="col-sm-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active " >
+                    <a class="d-block mb-4 h-100 col-lg-2 col-md-4 col-6 " data-toggle="modal" data-target=".musicPopUp-modal-lg" (click)="popUp()" *ngFor="let musicName of musicNames">
+                    <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg">
+                    </a>
+                  </div>
+                  <div class="carousel-item" >
+                    <a class="mb-4 h-100 col-lg-2 col-md-4 col-6 " data-toggle="modal" data-target=".musicPopUp-modal-lg" (click)="popUp()" *ngFor="let musicName of musicNames">
+                    <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg">
+                    <div class="caption">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                    </a>
+                  </div>
 
-                <!--Controls-->
-                <div class="controls-top">
-                <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fas fa-angle-left fa-3x pr-3"></i></a>
-                <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fas fa-angle-right fa-3x pl-3"></i></a>
+                  
                 </div>
-                <!--/.Controls-->
-            
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-            
-                <!--First slide-->
-                <div class="carousel-item active">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <a href="#"><img class="img-fluid" src="assets/images/pic.jpg"
-                        alt="Card image cap"></a>
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <a href="#"><img class="img-fluid" src="assets/images/pic1.jpg"
-                        alt="Card image cap"></a>
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic2.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic3.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                        <img class="img-fluid" src="assets/images/pic4.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                        <img class="img-fluid" src="assets/images/pic5.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    
-            
-                </div>
-                <!--/.First slide-->
-            
-                <!--Second slide-->
-                <div class="carousel-item">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic6.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic7.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic7.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic8.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic9.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic10.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                </div>
-                <!--/.Second slide-->
-            
-                <!--Third slide-->
-                <div class="carousel-item">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic1.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic3.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic7.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic5.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic9.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                </div>
-                <!--/.Third slide-->
-            
-                </div>
-                <!--/.Slides-->
-            
-            </div>
-            <!--/.Carousel Wrapper-->
+                
+              </div>
         </div>
     </div>
-    <!-- second row-->
-    <div class="row">
-        <h1>
-            Latest Hindi
-        </h1>
-        <div>
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
-
-                <!--Controls-->
-                <div class="controls-top">
-                <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fas fa-angle-left fa-3x pr-3"></i></a>
-                <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fas fa-angle-right fa-3x pl-3"></i></a>
-                </div>
-                <!--/.Controls-->
             
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-            
-                <!--First slide-->
-                <div class="carousel-item active">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic1.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic2.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic3.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                        <img class="img-fluid" src="assets/images/pic4.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                        <img class="img-fluid" src="assets/images/pic5.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    
-            
-                </div>
-                <!--/.First slide-->
-            
-                <!--Second slide-->
-                <div class="carousel-item">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic7.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic8.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic9.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic10.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic1.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic5.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                </div>
-                <!--/.Second slide-->
-            
-                <!--Third slide-->
-                <div class="carousel-item">
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic4.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                    <div class="card">
-                        <img class="img-fluid" src="assets/images/pic9.jpg"
-                        alt="Card image cap">
-                    </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic3.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic1.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <div class="card">
-                            <img class="img-fluid" src="assets/images/pic8.jpg"
-                            alt="Card image cap">
-                        </div>
-                    </div>
-            
-                </div>
-                <!--/.Third slide-->
-            
-                </div>
-                <!--/.Slides-->
-            
-            </div>
-            <!--/.Carousel Wrapper-->
-        </div>
-    </div>
     
 </div>
+<!--Music Popup -->
+<div class="modal fade musicPopUp-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" id="musicPopUp-modal-lg">
+    <div class="modal-dialog modal-lg bg-light">
+      <div class="row">
+          <div class="col-md-2 mb-2">
+              <img class="img-fluid" src="assets/images/pic.jpg"
+              alt="Card image cap">
+          </div>
+          <div class="col-md-6 mb-6">
+              <audio controls>
+                  <source src="horse.mp3" type="audio/mpeg">
+              </audio>
+              
+          </div>
+          <div class="modal-footer col-md-3 mb-3">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>

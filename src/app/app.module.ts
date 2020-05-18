@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,10 @@ import { HomeContentComponent } from './components/home-content/home-content.com
     HeaderComponent,
     FooterComponent,
     SliderComponent,
-    HomeContentComponent
+    HomeContentComponent,
+    GalleryComponent,
+    
+    
   ],
   imports: [
     BrowserModule,

@@ -2,18 +2,17 @@
   <div>
     <app-header></app-header>
   </div>
-  <div class="divSpace"></div>
   <div>
     <app-slider></app-slider>
   </div>
   <div class="divSpace"></div>
   <div>
-    <app-home-content></app-home-content>
+    <a routerLink="/homeContent"  routerLinkActive="active"></a>
   </div>
+  <router-outlet></router-outlet>
   <div class="divSpace"></div>
   <div>
     <app-footer></app-footer>
   </div>
 </div>
 
-<router-outlet></router-outlet>

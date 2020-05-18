@@ -1,0 +1,46 @@
+<!-- Page Content -->
+<div class="container">
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">All Music</h1>
+  
+    <hr class="mt-2 mb-5">
+  
+    <div class="row text-center text-lg-left"  >
+
+  
+      <div class="col-lg-2 col-md-4 col-6" *ngFor="let musicName of musicNames">
+        <a href="#" class="d-block mb-4 h-100"  data-toggle="modal" data-target=".musicPopUp-modal-lg">
+          <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg" alt="">
+          <div class="caption text-white">
+            <p>pic{{musicName}}...</p>
+          </div>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+  </div>
+  <!-- /.container -->
+
+
+  <!--Music Popup -->
+<div class="modal fade musicPopUp-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" id="musicPopUp-modal-lg">
+  <div class="modal-dialog modal-lg bg-light">
+    <div class="row">
+        <div class="col-md-2 mb-2">
+            <img class="img-fluid" src="assets/images/pic.jpg"
+            alt="Card image cap">
+        </div>
+        <div class="col-md-6 mb-6">
+            <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+            </audio>
+            
+        </div>
+        <div class="modal-footer col-md-3 mb-3">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>

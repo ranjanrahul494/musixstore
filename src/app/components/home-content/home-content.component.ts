@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-content.component.scss']
 })
 export class HomeContentComponent implements OnInit {
-
+  musicNames = ['1', '2', '3', '4','5', '6'];
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  popUp(){
+    alert('clicked');
   }
 
 }
