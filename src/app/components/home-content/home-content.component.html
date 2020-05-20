@@ -1,35 +1,58 @@
-<div class=" container clearfix">
-    <div class="row">
-        <h1>
-            Latest Hindi
-        </h1>
-        <a routerLink="/gallery"  routerLinkActive="active">All music</a>
-        <div class="col-sm-12">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active " >
-                    <a class="d-block mb-4 h-100 col-lg-2 col-md-4 col-6 " data-toggle="modal" data-target=".musicPopUp-modal-lg" (click)="popUp()" *ngFor="let musicName of musicNames">
-                    <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg">
-                    </a>
-                  </div>
-                  <div class="carousel-item" >
-                    <a class="mb-4 h-100 col-lg-2 col-md-4 col-6 " data-toggle="modal" data-target=".musicPopUp-modal-lg" (click)="popUp()" *ngFor="let musicName of musicNames">
-                    <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg">
-                    <div class="caption">
-                            <p>Lorem ipsum...</p>
-                        </div>
-                    </a>
-                  </div>
+<div class="container"> 
 
-                  
-                </div>
-                
-              </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Latest Hindi Music</h3>
         </div>
+        <div class="col-sm-6">
+           <h4 class="text-lg-right font-weight-light text-center  mt-4 mb-0"> <a routerLink="/gallery"  routerLinkActive="active">All music...</a> </h4>
+        </div>
+
     </div>
-            
     
+    <hr class="mt-2 mb-5">
+  
+    <div class="row text-center text-lg-left"  >
+        <div class="carousel slide carousel-multi-item" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-6" *ngFor="let musicName of musicNames">
+                            <a href="#" data-toggle="modal" data-target=".musicPopUp-modal-lg">
+                                <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg" alt="">
+                            </a>
+                            <div class="caption text-white">
+                                <p>pic{{musicName}}...</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row ">
+                        <div class="col-lg-2 col-md-4 col-6" *ngFor="let musicName of musicNames">
+                            <a href="#" data-toggle="modal" data-target=".musicPopUp-modal-lg">
+                                <img class="img-fluid img-thumbnail" src="assets/images/pic{{musicName}}.jpg" alt="">
+                            </a>
+                            <div class="caption text-white">
+                                <p>pic{{musicName}}...</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+  
+      
+      
+    </div>
+  
 </div>
+
+
+
 <!--Music Popup -->
 <div class="modal fade musicPopUp-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" id="musicPopUp-modal-lg">
     <div class="modal-dialog modal-lg bg-light">
